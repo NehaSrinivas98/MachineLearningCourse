@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form with 9 Inputs</title>
+</head>
+<body>
+
+  <h2>User Information Form</h2>
+
+  <form action="{{ url_for('predict') }}" method="post">
+    <label>MedInc</label><br>
+    <input type="text" name="medinc"><br><br>
+
+    <label>HouseAge</label><br>
+    <input type="text" name="houseage"><br><br>
+
+    <label>AveRooms</label><br>
+    <input type="text" name="averooms"><br><br>
+
+    <label>AveBedrms</label><br>
+    <input type="text" name="avebedrms"><br><br>
+
+    <label>Population</label><br>
+    <input type="text" name="population"><br><br>
+
+    <label>AveOccupancy</label><br>
+    <input type="text" name="aveoccupancy"><br><br>
+
+    <label>Latitude</label><br>
+    <input type="text" name="latitude"><br><br>
+
+    <label>Longitude</label><br>
+    <input type="text" name="longitude"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+<h2>
+    {{result}}
+</h2>
+</body>
+</html>
