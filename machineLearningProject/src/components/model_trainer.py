@@ -1,0 +1,1 @@
+# training the model : This component is responsible for training the machine learning model using the transformed data. It may include code for selecting the appropriate algorithm, tuning hyperparameters, and evaluating the model's performance.

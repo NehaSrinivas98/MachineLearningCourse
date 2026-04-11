@@ -1,3 +1,4 @@
+# this is the config file that tells python how to use our project
 from setuptools import find_packages, setup
 def get_requirements(file_path:str)->list[str]:
     requirements =[]
@@ -12,6 +13,6 @@ setup(
     version='0.1.0',
     author='Neha',
     author_email='neha@example.com',
-    packages=find_packages(),
+    packages=find_packages(),  # It will look for a src file and build it to use it anywhere
     install_requires=get_requirements('requirements.txt'),
 )

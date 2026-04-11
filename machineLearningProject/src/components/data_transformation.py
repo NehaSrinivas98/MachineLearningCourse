@@ -1,0 +1,1 @@
+# Data transformation : This component is responsible for transforming the data into a format that can be used by the machine learning model. This may include scaling, encoding, and feature engineering.
