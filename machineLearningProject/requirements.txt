@@ -1,4 +1,5 @@
 pandas 
 numpy
 seaborn
--e. # triggers setup.py to build the file
+scikit-learn
+#-e. # triggers setup.py to build the file
