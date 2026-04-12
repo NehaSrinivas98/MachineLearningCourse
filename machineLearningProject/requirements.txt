@@ -2,4 +2,6 @@ pandas
 numpy
 seaborn
 scikit-learn
+dill
+matplotlib
 #-e. # triggers setup.py to build the file
