@@ -4,4 +4,6 @@ seaborn
 scikit-learn
 dill
 matplotlib
+catboost
+xgboost
 #-e. # triggers setup.py to build the file
