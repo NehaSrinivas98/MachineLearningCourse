@@ -6,4 +6,5 @@ dill
 matplotlib
 catboost
 xgboost
+Flask
 #-e. # triggers setup.py to build the file
