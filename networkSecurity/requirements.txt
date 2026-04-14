@@ -3,4 +3,6 @@ pandas
 numpy
 setuptools
 Certifi
--e.
+pymongo[srv]==3.12
+pymongo
+-e. # creates package network_security.egg-info
