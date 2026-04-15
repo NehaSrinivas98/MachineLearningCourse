@@ -5,4 +5,5 @@ setuptools
 Certifi
 pymongo[srv]==3.12
 pymongo
+scikit-learn
 -e. # creates package network_security.egg-info

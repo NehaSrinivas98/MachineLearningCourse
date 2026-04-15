@@ -3,8 +3,7 @@ import sys
 import json
 from dotenv import load_dotenv
 load_dotenv()
-uri = os.getenv("MONGO_DB_URL")
-print(uri)
+uri = os.getenv("MONGO_DB_URI") or os.getenv("MONGO_DB_URL")
 import certifi
 ca = certifi.where()
 import pandas as pd
@@ -31,10 +30,17 @@ class NetworkDataExtract():
         
     def insert_data_to_mongodb(self,records,database,collection):
         try:
+            if not uri:
+                raise CustomException("MONGO_DB_URI or MONGO_DB_URL environment variable is not set.", sys)
             self.database = database
             self.collection = collection
             self.records = records
-            self.mongoclient = pymongo.MongoClient(uri)
+            self.mongoclient = pymongo.MongoClient(
+                uri,
+                serverSelectionTimeoutMS=30000,
+                connectTimeoutMS=10000,
+            )
+            self.mongoclient.admin.command("ping")
             self.database = self.mongoclient[self.database]
             self.collection = self.database[self.collection]
             self.collection.insert_many(self.records)
